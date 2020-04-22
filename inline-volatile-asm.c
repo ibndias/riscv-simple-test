@@ -6,7 +6,7 @@ int main(){
   b = 2;
   asm volatile
   (
-    "adder   %[z], %[x], %[y]\n\t"
+    "add   %[z], %[x], %[y]\n\t"
     : [z] "=r" (c)
     : [x] "r" (a), [y] "r" (b)
   );  

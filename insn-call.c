@@ -4,6 +4,7 @@ int main(){
   int a,b,c;
   a = 5;
   b = 2;
+  c = 1;
 /*
   asm volatile
   (
@@ -19,7 +20,7 @@ int main(){
   */
   asm volatile
   ( 
-    ".insn r 0xD3, 0, 0x1, %[z], %[x], %[y]\n\t"
+    ".insn i 0x03, 7, %[z], %[x], %[y]\n\t"
     : [z] "=r" (c)
     : [x] "r" (a), [y] "r" (b)
   );  
